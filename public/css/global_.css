@@ -1,0 +1,43 @@
+* {
+    font-family: "Nunito", sans-serif;
+    box-sizing: content-box;
+  
+    --base50: #f6f7f8;
+    --base100: #edeff1;
+    --base200: #d7dce0;
+    --base300: #b5bec4;
+    --base400: #8c9ba4;
+    --base500: #6e7e89;
+    --base600: #586671;
+    --base700: #48535c;
+    --base800: #3e464e;
+    --base900: #373e43;
+    --base950: #24282d;
+  
+  
+    --header-height: 4rem;
+  }
+  
+  /* #region general */
+  html, body, header {
+    display: flex;
+  }
+  
+  html, body {
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  header, footer {
+    width: 100%;
+  }
+  
+  main {
+    flex: 1;
+  }
+
+/* navbar*/
+
+  
+  /* #endregion */

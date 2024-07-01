@@ -1,0 +1,199 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Nunito", sans-serif;
+    font-size: 16px;
+}
+
+body {
+    margin: 0;
+
+    background-image: url("../img/girls-training.jpg");
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    /*font-family: Arial, sans-serif;*/
+}
+
+
+.descripcion {
+    background-color: #f6f7f8;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+}
+/*main{
+    background-color: #0079c1;
+}*/
+
+.tituloPrin{
+    margin: 10px 10px 10px 10px;
+    background-color: #5ABDAD;
+    border-radius: 5px;
+    height: 40px;
+    padding: 10px;
+    font-size: 20px;
+}
+
+.header{
+
+    --size: 5.25rem;
+
+    --margin-vertical: 1rem;
+    --margin-horizintal: 2rem;
+  
+    --padding-vertical: 0.0625rem;
+    --padding-horizintal: 0.25rem;
+  
+    --button-width: 6rem;
+    --button-width-menu: 5.25rem;
+    --button-height: 3.125rem;
+  
+
+    display: flex;
+    background-color: #f6f7f8;
+    justify-content: space-between;
+    align-items: center;
+    height: 85px;
+    padding: 5px 3%;
+    position: relative; /* Agregado */
+}
+
+.header .logo img{
+    height: 70px;
+    width: auto;
+}
+
+nav {
+    background-color: #f6f7f8;
+}
+
+.pie{
+    background-color: #333;
+    position: absolute; 
+    bottom: 0; 
+    left: 0; 
+    z-index: 10;
+    width: 100%;
+    color: #f6f7f8; 
+    text-align: center;
+}
+
+
+.nav-bar {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    background-color: #f6f7f8;
+    padding: 1rem;
+    font-size: 21px;
+}
+
+.menu-btn {
+    display: none; 
+    background-color: #444;
+
+
+}
+
+.nav-menu {
+
+    
+    display: flex;
+    list-style-type: none;
+}
+
+.nav-link {
+    color: #24156e;
+    padding: 0 1rem;
+    text-decoration: none;
+    margin: calc(0.25 * var(--margin-vertical)) calc(0.25 * var(--margin-horizintal));
+    height: 3rem;
+}
+
+.nav-link:hover{
+   color: #ffffff;
+   font-size: 16px;
+   padding: 20px;
+   /*transition-duration: 0.4s;*/
+   background-color: #00457c;
+   border-radius: 5px;
+}
+
+@media screen and (max-width: 768px) {
+    .nav-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #333;
+        flex-direction: column;
+        display: none;
+    }
+
+    body{
+        background-repeat: repeat;
+    }
+
+    .menu-btn {
+        display: block;
+        color: #fff;
+        background-color: #444;
+        padding: 0.5rem 1rem;
+        border: none;
+        cursor: pointer;
+    }
+
+    .nav-link {
+        color: #fff;
+        padding: 4px 16px;
+    }
+    .nav-link:hover{
+        font-size: 16px;
+        border-radius: 5px;
+        background-color: #444;
+     }
+
+    .nav-menu.show {
+        display: flex;
+    }
+
+    .pie{
+        bottom: unset;
+    } 
+    
+    .nav-item {
+        margin-bottom: 10px;
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+    .nav-link {
+        padding: 0.5rem 1rem;
+
+    }
+
+    body{
+        background-repeat: repeat;
+    }
+
+    .nav-link {
+        color: #fff;
+    }
+
+    .pie{
+        bottom: unset;
+    }  
+
+    .tituloPrin{
+        margin: auto;
+        background-color: #5ABDAD;
+        border-radius: 5px;
+        height: auto;
+        width: auto;
+        padding: 10px;
+
+    }
+}

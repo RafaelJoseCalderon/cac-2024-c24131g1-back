@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width= device-width">
+  <link rel="icon" href="icons/favicon.ico" type="image/x-icon">
+
+  <link rel="stylesheet" href="./css/global_.css">
+  <link rel="stylesheet" href="./css/navbar.css">
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/contacto.css">
+  <link rel="stylesheet" href="./css/footer.css">
+
+  <link rel="stylesheet" href="statics/fontawesome-free-652-web/css/all.min.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+
+  <title>Zapaterias Nino</title>
+</head>
+
+<body>
+  <header class="header">
+    <div class="logo">
+      <img src="./img/logo1.jpg" alt="logo_nino">
+    </div>
+    <nav class="nav-bar">
+      <button class="menu-btn">Menu</button>
+      <ul class="nav-menu">
+        <li><a href="./index.html" class="nav-link">Inicio</a></li>
+        <li><a href="./products.html" class="nav-link">Catalogo</a></li>
+        <li><a href="#" class="nav-link">Contacto</a></li>
+        <li><a href="./ubicacion.html" class="nav-link">Ubicacion</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="formulario">
+      <form id="contact" action="show_data.html" target="_blank">
+        <fieldset class="imput">
+
+          <div class="group-input">
+            <label for="fullName" class="form-label">Nombre y Apellido:</label>
+            <input id="fullName" type="text" name="fullName" class="form-control" placeholder="xxxxxxxx">
+
+            <div class="form-error"></div>
+          </div>
+
+          <div class="group-input">
+            <label for="email" class="form-label">Correo electronico:</label>
+            <input id="email" type="email" name="email" class="form-control" placeholder="xxxxxx@xxxx">
+
+            <div class="form-error"></div>
+          </div>
+
+          <div class="group-input">
+            <label for="phone" class="form-label">Telefono:</label>
+            <input id="phone" type="text" name="phone" class="form-control" placeholder="xx-xxxxxxx">
+
+            <div class="form-error"></div>
+          </div>
+
+          <div class="group-input">
+            <label for="message" class="form-label">Mensaje:</label>
+            <textarea id="message" name="message" class="form-control" cols="47" rows="10"></textarea>
+
+            <div class="form-error"></div>
+          </div>
+
+        </fieldset>
+
+        <fieldset>
+         
+          <legend> <br>¿Que tipo de calzado busca?</legend>
+
+          <div class="group-input" id="radio">
+            <label for="radio-children"><br>Niños</label>
+            <input id="radio-children" type="radio" name="category" value="children" checked>
+
+            <label for="radio-ladies">Damas</label>
+            <input id="radio-ladies" type="radio" name="category" value="ladies">
+
+            <label for="radio-gentlemen">Caballeros</label>
+            <input id="radio-gentlemen" type="radio" name="category" value="gentlemen">
+          </div>
+        </fieldset>
+
+        <div class="group-input" id="checkbox">
+          <label for="checkboxWhatsapp" class="form-checkbox">¿Le gustaría recibir nuestras ofertas por WhatsApp?</label>
+
+          <input id="checkboxWhatsapp" type="checkbox" name="checkboxWhatsapp" class="form-control" checked>
+        </div>
+
+        <button type="submit">Enviar Formulario</button><br>
+
+      </form>
+
+    </div>
+  </main>
+  
+  <footer>
+
+    <div class="caption">
+      <span>Zapateria Nino</span>
+      <span>zapateria.nino@gmail.com</span>
+      <span>+54 11 xxx xxx-xxxx</span>
+    </div>
+
+    <p class="icons">
+      <a href="https://twitter.com"><i class="fa-brands fa-x-twitter"></i></a>
+      <a href="https://es-la.facebook.com"><i class="fa-brands fa-facebook-f"></i></a>
+      <a href="https://www.instagram.com"><i class="fa-brands fa-instagram"></i></a>
+    </p>
+
+  </footer>
+
+  <script src="./js/nav-bar.js"></script>
+  
+  <script src="./js/validation.js"></script>
+ 
+  </body>
+
+</html>
