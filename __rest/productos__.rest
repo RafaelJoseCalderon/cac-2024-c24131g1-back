@@ -1,0 +1,88 @@
+@hostname = localhost
+@port = 3000
+@host = http://{{hostname}}:{{port}}
+
+##############################################################
+# @no-cookie-jar
+# @no-redirect
+GET /api/products/on-sales HTTP/1.1
+Content-Type: application/json
+
+##############################################################
+# @no-cookie-jar
+# @no-redirect
+GET /api/products/in-editions HTTP/1.1
+Content-Type: application/json
+
+##############################################################
+# @no-cookie-jar
+# @no-redirect
+GET /api/products/deletes HTTP/1.1
+Content-Type: application/json
+
+##############################################################
+# @no-cookie-jar
+# @no-redirect
+GET /api/products/1 HTTP/1.1
+Content-Type: application/json
+
+##############################################################
+# @no-cookie-jar
+# @no-redirect
+POST /api/products/create HTTP/1.1
+Content-Type: application/json
+
+{
+    "id_categoria": 1,
+    "nombre": "producto_1006",
+    "precio": "66666.6",
+    "stock": 100,
+    "imagen": "1006.png"
+}
+
+{{
+    let body = response.parsedBody;
+    $global.producto_id = body?.id;
+}}
+
+##############################################################
+# @no-cookie-jar
+# @no-redirect
+PUT /api/products/update/{{$global.producto_id}} HTTP/1.1
+Content-Type: application/json
+
+{
+    "id_categoria": 1,
+    "nombre": "producto_1007",
+    "precio": "77777.7",
+    "stock": 50,
+    "imagen": "1007.png"
+}
+
+##############################################################
+# @no-cookie-jar
+# @no-redirect
+PUT /api/products/on-sale/{{$global.producto_id}} HTTP/1.1
+Content-Type: application/json
+
+##############################################################
+# @no-cookie-jar
+# @no-redirect
+DELETE /api/products/delete/{{$global.producto_id}} HTTP/1.1
+Content-Type: application/json
+
+{{
+    delete $global.producto_id
+}}
+
+##############################################################
+# @no-cookie-jar
+# @no-redirect
+DELETE /api/products/delete/1 HTTP/1.1
+Content-Type: application/json
+
+##############################################################
+# @no-cookie-jar
+# @no-redirect
+PUT /api/products/on-sale/1 HTTP/1.1
+Content-Type: application/json

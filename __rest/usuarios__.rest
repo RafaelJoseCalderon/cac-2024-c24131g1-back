@@ -1,0 +1,66 @@
+@hostname = localhost
+@port = 3000
+@host = http://{{hostname}}:{{port}}
+
+##############################################################
+# @no-cookie-jar
+# @no-redirect
+POST /api/registration/signup HTTP/1.1
+Content-Type: application/json
+
+{
+    "nombre": "juan",
+    "apellido": "perez",
+    "password": "123",
+    "email": "juan_perez@email.com"
+}
+
+{{
+    let body = response.parsedBody;
+    $global.token_jp = body?.token;
+}}
+
+##############################################################
+# @no-cookie-jar
+# @no-redirect
+GET /api/registration/protected HTTP/1.1
+Authorization: Bearer {{$global.token_jp}}
+Content-Type: application/json
+
+{{
+    delete $global.token_jp
+}}
+
+##############################################################
+# @no-cookie-jar
+# @no-redirect
+POST /api/registration/login HTTP/1.1
+Content-Type: application/json
+
+{
+    "email": "adan@email.com",
+    "password": "123"
+}
+
+{{
+    let body = response.parsedBody;
+    $global.token_adan = body?.token;
+}}
+
+##############################################################
+# @no-cookie-jar
+# @no-redirect
+GET /api/registration/protected HTTP/1.1
+Authorization: Bearer {{$global.token_adan}}
+Content-Type: application/json
+
+{{
+    delete $global.token_adan
+}}
+
+##############################################################
+# @no-cookie-jar
+# @no-redirect
+GET /api/registration/protected HTTP/1.1
+Authorization: Bearer xxx
+Content-Type: application/json
