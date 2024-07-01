@@ -1,0 +1,27 @@
+{
+  "name": "zapateria_nino",
+  "version": "0.0.0",
+  "description": "API de la zapatería nino. Ejercicio practico para cátedra de codo a codo.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node --watch index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RafaelJoseCalderon/cac-2024-c24131g1-back.git"
+  },
+  "author": "Analía Savino, Leonardo Rios, Rafael José Calderón",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/RafaelJoseCalderon/cac-2024-c24131g1-back/issues"
+  },
+  "homepage": "https://github.com/RafaelJoseCalderon/cac-2024-c24131g1-back#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2",
+    "multer": "^1.4.5-lts.1",
+    "mysql2": "^3.10.1"
+  }
+}
