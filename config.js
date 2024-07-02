@@ -1,9 +1,9 @@
 const database = {
-    host: "127.0.0.1", //localhost
-    user: "root",
-    password: "root",
-    database: "root_base",
-    connectionLimit: 5 // Adjust the connection limit as per your requirements
+    host: process.env.DB_HOST || "127.0.0.1",
+    user: process.env.DB_USER || "root",
+    password: process.env.DB_PASS || "root",
+    database: process.env.DB_NAME || "root_base",
+    connectionLimit: 5
 }
 
 

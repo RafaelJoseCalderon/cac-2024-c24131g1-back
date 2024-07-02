@@ -1,3 +1,5 @@
+require("dotenv").config();
+
 const express = require("express");
 const app = express();
 
@@ -12,7 +14,5 @@ app.use("/api/receipt", require("./routes/receipt"));
 app.use("/api/registration", require("./routes/registration"));
 
 
-const port = 3000;
-app.listen(port, () => {
-    console.log(`Servidor corriendo en http://localhost:${port}`);
-});
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => console.log(`http://localhost:${PORT}`));
