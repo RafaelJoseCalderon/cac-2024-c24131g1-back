@@ -1,6 +1,11 @@
 @hostname = localhost
 @port = 3000
-@host = http://{{hostname}}:{{port}}
+@host = http://lrios.alwaysdata.net
+
+##############################################################
+# @no-cookie-jar
+# @no-redirect
+GET / HTTP/1.1
 
 ##############################################################
 # @no-cookie-jar
