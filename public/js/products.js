@@ -2,18 +2,20 @@ const damas = document.querySelector("#damas-contenedor");
 const ninios = document.querySelector("#ninios-contenedor");
 const caballero = document.querySelector("#caballeros-contenedor");
 
+
 const caja = (producto) => {
     return `
         <div class="box">
             <img src="img/products/${producto.imagen}" alt="...">
             <div class="divider"></div>
             <p>Producto: ${producto.nombre}</p>
-            <p>${producto.precio}</p>
+            <p>${producto.precio}$ pesos</p>
         </div>
     `;
 }
 
-fetch('http://localhost:3000/api/products/on-sales')
+
+fetch('/api/products/on-sales')
     .then(response => {
         if (!response.ok) {
             throw new Error('Network response was not ok');
